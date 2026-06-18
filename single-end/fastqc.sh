@@ -1,12 +1,12 @@
 #!/bin/bash --login
 #SBATCH -J fastqc
-#SBATCH -o logs/fastqc_%A_%a.out    # %A = array job ID, %a = task ID
+#SBATCH -o logs/fastqc_%A_%a.out    
 #SBATCH -e logs/fastqc_%A_%a.err
-#SBATCH -p serial                   # 1 core per task
+#SBATCH -p serial                   
 #SBATCH -t 0-1
 #SBATCH --array=1-67
 #SBATCH --mail-type=END,FAIL        
-#SBATCH --mail-user=stefano.togatorop@postgrad.manchester.ac.uk
+#SBATCH --mail-user=your@email
 
 # Clean environment
 module purge

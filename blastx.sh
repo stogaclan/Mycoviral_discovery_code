@@ -8,7 +8,7 @@
 #SBATCH -t 0-3
 #SBATCH -a 1-6
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=stefano.togatorop@postgrad.manchester.ac.uk
+#SBATCH --mail-user=your@email
 
 # Clean environment
 module purge

@@ -4,9 +4,9 @@
 #SBATCH -e logs/sra_download_%A_%a.err
 #SBATCH -p serial
 #SBATCH -t 1-0
-#SBATCH -a 1-24
+#SBATCH -a 1-24  
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=stefano.togatorop@postgrad.manchester.ac.uk
+#SBATCH --mail-user=your@email
 
 # Clean environment
 module purge
@@ -42,8 +42,8 @@ if [[ -z "$SAMPLE" ]]; then
 fi
 
 # --- USER INPUT ---
-OUTDIR="SRA_data"         # Output directory
-# ------------------
+OUTDIR="SRA_data"         
+
 
 # check if output directory exists, if not create it
 if [[ ! -d "$OUTDIR" ]]; then

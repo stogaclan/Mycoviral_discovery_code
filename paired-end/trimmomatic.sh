@@ -1,12 +1,12 @@
 #!/bin/bash --login
 #SBATCH -J trimmomatic
-#SBATCH -o logs/trimmomatic_%A_%a.out    # %A = array job ID, %a = task ID
+#SBATCH -o logs/trimmomatic_%A_%a.out    
 #SBATCH -e logs/trimmomatic_%A_%a.err
 #SBATCH -p serial
 #SBATCH -t 0-4
 #SBATCH --array=1-24
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=stefano.togatorop@postgrad.manchester.ac.uk
+#SBATCH --mail-user=your@email
 
 # Clean environment
 module purge
@@ -42,7 +42,7 @@ LEADING=20                        # Remove leading bases below Phred quality 20
 TRAILING=20                       # Remove trailing bases below Phred quality 20
 SLIDINGWINDOW="5:20"              # Sliding window: window size 5, quality threshold 20
 MINLEN=50                         # Minimum read length after trimming
-# ------------------
+
 
 # Check input directory exists
 if [[ ! -d "$INDIR" ]]; then

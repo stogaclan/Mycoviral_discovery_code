@@ -7,7 +7,7 @@
 #SBATCH -t 0-2
 #SBATCH -a 1-6
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=stefano.togatorop@postgrad.manchester.ac.uk
+#SBATCH --mail-user=your@email
 
 # Clean environment
 module purge
@@ -38,7 +38,7 @@ echo "Running Trinity for sample: $SAMPLE"
 INDIR="trimmomatic_out"           # Directory containing trimmed paired .fastq.gz files
 OUTDIR="trinity_out"              # Base output directory (NOT including sample name)
 MAX_MEMORY="16G"                  # Maximum memory for Trinity
-# ------------------
+
 
 # check if outdir exists, if not create it
 if [[ ! -d "$OUTDIR" ]]; then

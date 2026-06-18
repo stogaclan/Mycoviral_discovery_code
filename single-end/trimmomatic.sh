@@ -1,12 +1,12 @@
 #!/bin/bash --login
 #SBATCH -J trimmomatic
-#SBATCH -o logs/trimmomatic_%A_%a.out    # %A = array job ID, %a = task ID
+#SBATCH -o logs/trimmomatic_%A_%a.out    
 #SBATCH -e logs/trimmomatic_%A_%a.err
 #SBATCH -p serial                   
 #SBATCH -t 0-1
 #SBATCH --array=1-67
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=stefano.togatorop@postgrad.manchester.ac.uk
+#SBATCH --mail-user=your@email
 
 # Clean environment
 module purge

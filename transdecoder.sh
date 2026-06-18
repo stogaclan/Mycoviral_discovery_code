@@ -7,7 +7,7 @@
 #SBATCH -t 0-4
 #SBATCH --array=1-6
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=stefano.togatorop@postgrad.manchester.ac.uk
+#SBATCH --mail-user=your@email
 
 module purge
 module load apps/gcc/transdecoder/5.5.0
