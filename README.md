@@ -12,12 +12,13 @@ PRJNA11029          # the working directory
 └── logs/           # all the job logs will be here (stdout & stderr)
 ```
 2. Create list of SRA accessions IDs in a text file called "SRA_list.txt", this will be used to download the data (sra_download.sh). It should be in the same directory as the scripts. The formatting should be something like: 
-
-SRR029811<br>
-SRR029812<br>
-SRR029813<br>
-SRR029814<br>
+```
+SRR029811
+SRR029812
+SRR029813
+SRR029814
 ... 
+```
 
 3. Paired-end or Single-end data? Scripts of steps 1-4 are different depending on library layout. 
 
