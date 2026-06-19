@@ -59,7 +59,7 @@ if [[ ! -d "transdecoder_out" ]]; then
     mkdir transdecoder_out
 fi
 
-
+# --- USER INPUT --- 
 # TransDecoder 
 TransDecoder.LongOrfs -t ${contig_fasta} -m 100
 TransDecoder.Predict -t ${contig_fasta} --no_refine_starts
